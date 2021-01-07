@@ -21,5 +21,5 @@ end
 
 def won?(board)
   WIN_COMBINATIONS.each do |combo|
-    if (combo[0] == "X" || combo[0] == "O") 
+    if (combo[0] == "X" || combo[0] == "O")
 end
