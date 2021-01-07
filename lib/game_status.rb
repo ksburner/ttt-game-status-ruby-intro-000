@@ -19,7 +19,7 @@ def space_occupied?(board, space)
   return (board[space] == "X" || board[space] == "O")
 end
 
-def spaces_equal(board, spaces)
+def spaces_equal?(board, spaces)
   if board.length == 0 || spaces.length == 0 { return false }
   val = board[spaces[0]]
   spaces.all? do |index|
@@ -29,7 +29,5 @@ end
 
 def won?(board)
   WIN_COMBINATIONS.each do |combo|
-    if (space_occupied?(board, combo[0]) &&
-      board[combo[0]] == board[combo[1]] &&
-      board[combo[0]] == board[combo[2]])
+    if (space_occupied?(board, combo[0]) && )
 end
