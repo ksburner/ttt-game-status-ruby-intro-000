@@ -15,11 +15,20 @@ WIN_COMBINATIONS = [
   [2, 4, 6]
 ]
 
-def space_has_move?(board, space)
+def space_occupied?(board, space)
   return (board[space] == "X" || board[space] == "O")
+end
+
+def spaces_equal(board, spaces)
+  val = board[spaces[0]]
+  spaces.all? do |index|
+    board[index] == val
+  end
 end
 
 def won?(board)
   WIN_COMBINATIONS.each do |combo|
-    if (combo[0] == "X" || combo[0] == "O")
+    if (space_occupied?(board, combo[0]) && 
+      board[combo[0]] == board[combo[1]] && 
+      board[combo[0]] == board[combo[2]])
 end
