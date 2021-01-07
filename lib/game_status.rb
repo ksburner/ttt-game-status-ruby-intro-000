@@ -20,7 +20,9 @@ def space_occupied?(board, space)
 end
 
 def spaces_equal?(board, spaces)
-  if board.length == 0 || spaces.length == 0 { return false }
+  if board.length == 0 || spaces.length == 0
+    return false
+  end
   val = board[spaces[0]]
   spaces.all? do |index|
     board[index] == val
