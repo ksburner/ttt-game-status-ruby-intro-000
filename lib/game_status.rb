@@ -28,7 +28,7 @@ end
 
 def won?(board)
   WIN_COMBINATIONS.each do |combo|
-    if (space_occupied?(board, combo[0]) && 
-      board[combo[0]] == board[combo[1]] && 
+    if (space_occupied?(board, combo[0]) &&
+      board[combo[0]] == board[combo[1]] &&
       board[combo[0]] == board[combo[2]])
 end
